@@ -3,7 +3,7 @@ const app = express()
 const axios = require("axios")
 const PORT = process.env.PORT || 3030;
 
-const apiKey = 'XJldLIIAPnq69757yUCA'; // Replace with your TransLink API key
+const apiKey = process.env.TRANSLINK_API_KEY; // Replace with your TransLink API key
 const busStopNumber = '61890'; // Replace with your bus stop number
 const url = `http://api.translink.ca/rttiapi/v1/stops/${busStopNumber}/estimates?apikey=${apiKey}&count=3&timeframe=120&routeNo=181`;
 
